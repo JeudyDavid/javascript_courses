@@ -57,8 +57,85 @@ enterprise[0] //access element in an array
 // array common methods
 enterprise.toString()
 enterprise.join('+') //Brana+Natcom+Digicel+marriot
-console.log(enterprise.pop())
-console.log(enterprise.push('kinam'))
-console.log(enterprise)
+console.log(enterprise.pop()) //remove the last element
+console.log(enterprise.push('kinam')) //append at the end
+enterprise[enterprise.length] = "kinam 2" //same as push
+enterprise.shift() //remove the first element to an array
+enterprise.unshift() //add at the first an item to an array
+allEnterprise = enterprise.concat(enterprise1) //concat two array
+allEnterprise.slice(1,4)
+allEnterprise.reverse()
+
+var number = [2,5,1,3,10,200,45,56]
+number.sort()
 
 
+// Objects in javascript
+// dictionnaires in python
+
+var nom = {nom: 'david',
+          prenom: "Jeudy",
+          info: function(){
+             return this.nom + " " + this.prenom
+          }
+         }
+// console.log(nom.info())
+
+//conditionnal, control flows (if else)
+// if((age<18) && (age>30)){
+//    console.log("great")
+// }
+
+switch(6){
+    case 0:
+       day = "weekday"
+       break;
+    case 2:
+       day = "weekday"
+       break;
+    default:
+       day = "weekend"
+
+}
+
+var eleve = `[
+   {
+      "nom": "David",
+      "prenom": "Jeudy",
+      "age": 18
+   },
+   {
+      "nom": "Alain",
+      "prenom": "Web",
+      "age": 67
+   }
+]`
+// console.log(JSON.parse(eleve))
+var student = [
+   {
+      "nom": "David",
+      "prenom": "Jeudy",
+      "age": 18
+   },
+   {
+      "nom": "Alain",
+      "prenom": "Web",
+      "age": 67
+   }
+]
+
+// console.log(JSON.stringify(student))
+
+var etudiant = [{
+   "nom": "max",
+   "prenom": "james",
+   "Age": 34,
+   "classe": "philo"
+},{
+   "nom": "melmix",
+   "prenom": "jovens",
+   "Age": 45,
+   "classe": "retho" 
+}]
+
+console.log(etudiant[0].nom)
